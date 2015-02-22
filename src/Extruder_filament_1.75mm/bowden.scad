@@ -81,7 +81,7 @@ difference() {
 		}
 		difference() {
 			translate([4,0,9+5]) cube([20,5,35]);
-			translate([4,1,33.5]) cube([15,4,8]);
+			translate([4,1,33.5]) cube([15,6,8]);
 		}
 	};
 	
@@ -109,11 +109,11 @@ difference() {
 		translate([4.5,1,36.5]) cube([14,41,5]);
 		translate([4.5,24,37]) rotate([-180,0]) cube([14,6,3]);
 	}
-	translate([4.5,36,36.5]) cube([15,45,2]);
-	translate([4.5,1,36.5]) cube([3,8,5]);
-	translate([4.5,46-13,36.5]) cube([3,13,5]);
+	translate([4,36,36]) cube([15.5,47,2.5]);
+	translate([4,0,36]) cube([3.5,9,7]);
+	translate([4,46-13,36]) cube([3.5,13,7]);
 //	translate([11.5,21,37]) rotate([0,90]) cylinder(r=6.5, h=6, center=true); // test lozisko
-	translate([11.5-3,21-7.5,33]) cube([6,15,20]); // test lozisko
+	translate([11.5-3,21-7.5,33]) cube([6,15,20]); 
 	translate([11.5,21,37]) rotate([0,90,0]) cylinder(r=2, h=12, center=true, $fn=8);
 	translate([11.5-6,23,37]) rotate([-180,0]) cube([12,4,10]);
 translate([4+7.5,39.5,32.5]) cylinder(r=1.5,h=20,$fn=8);
