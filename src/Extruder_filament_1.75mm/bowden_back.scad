@@ -53,66 +53,49 @@ difference() {
 
 
 
-translate([19+20,21,26.5]) { // uložení ložiska hřídele
+translate([19,21,26.5]) { // uložení ložiska hřídele
 	difference() {
 		union() {
 			translate([0,-21,-26.5]) cube([5,42,39]);
 			rotate([0,90,0]) cylinder(r=10,h=6);
-			translate([0,-21,12.5]) cube([5,15,8]);
 		}
 		translate([1,0]) rotate([0,90,0]) cylinder(r=8,h=10);
 		translate([-1,0]) rotate([0,90,0]) cylinder(r=6,h=11);
-		//translate([-1,4.4-21,9.4-26.5]) cube([7,5,5]);
-		//translate([-1,42-7.6-21,9.4-26.5]) cube([7,5,5]);
-
-		translate([-1-19,6-21,5+6-26.5])
-			rotate([0,90,0]) cylinder(r=1.6,h=30,$fn=8);
-		translate([-1-19,42-(6)-21,5+6-26.5])
-			rotate([0,90,0]) cylinder(r=1.6,h=30,$fn=8);
-
-
-
-		translate([-1-19,6-21,5+6+31-26.5])
-			rotate([0,90,0]) cylinder(r=1.6,h=30,$fn=8);
+		translate([-1,4.4-21,9.4-26.5]) cube([7,5,5]);
+		translate([-1,42-7.6-21,9.4-26.5]) cube([7,5,5]);
 	}
 }
 
 
 
-translate([4,0,0]) cube([15,42,5]);
 // pruchod filamentu
 
-translate([0,-30,0])
+	translate([4,0,0]) cube([15,42,5]);
 difference() {
-	translate([4,3.5,5]) cube([15,5,35+7]);
-	translate([3,2+3.5,33.5]) cube([17,6,6]);
-	translate([-1,6,5+6])
-		rotate([0,90,0]) cylinder(r=1.6,h=30,$fn=8);
-	translate([-1,6,5+6+31])
-		rotate([0,90,0]) cylinder(r=1.6,h=40,$fn=8);
-}
-
-// drzak s bowdenem
-translate([0,30,0])
-difference() { 
-	translate([4,33.5,5]) cube([15,5,34]);
-//	translate([4+7.5,39.5,35]) rotate([0,0,30]) cylinder(r=m3_nut_diameter/2,h=50,$fn=6);
-	translate([4+7.5-2.7,36-3.5,34]) cube([5.4, 7, 3]);
-	translate([4+7.5,39.5-3.5,32.5]) cylinder(r=1.5,h=20,$fn=8);
-	translate([-1,42-(6),5+6])
-	rotate([0,90,0]) cylinder(r=1.6,h=30,$fn=8);
-	//upevnění bowdenu
-	translate([19-2,36-3.5,35]) rotate([-90,30,0]) cylinder(r=1.6,h=50,$fn=6);
-	translate([4+3,36-3.5,23]) rotate([-90,0,0]) cylinder(r=1.6,h=50,$fn=6);
-
-	translate([11.5,-5-3.5, 26.5+4.075]) rotate([-90,0,0]) cylinder(r=filament_feed_hole_d/2,h=50,$fn=8);	
-}
+	union() {
+		difference() {
+			translate([4,37,9+5+5]) cube([15,5,20]);
+//			translate([4+7.5,39.5,35]) rotate([0,0,30]) cylinder(r=m3_nut_diameter/2,h=50,$fn=6);
+			translate([4+7.5-2.7,36,34]) cube([5.4, 7, 3]);
+			translate([4+7.5,39.5,32.5]) cylinder(r=1.5,h=20,$fn=8);
+		}
+		difference() {
+			translate([4,0,9+5]) cube([20,5,35]);
+			translate([4,1,33.5]) cube([15,6,8]);
+		}
+	};
 	
+	//upevnění bowdenu
+	translate([19-2,36,35]) rotate([-90,30,0]) cylinder(r=1.6,h=50,$fn=6);
+	translate([4+3,36,23]) rotate([-90,0,0]) cylinder(r=1.6,h=50,$fn=6);
+
+	translate([11.5,-5, 26.5+4.075]) rotate([-90,0,0]) cylinder(r=filament_feed_hole_d/2,h=50,$fn=8);	
+}
 
 
 
 //drzak bowden	
-translate([0,45,0]) difference() {
+translate([0,25,0]) difference() {
 	translate([4,37,9+5+5]) cube([15,5,20]);
 	//upevnění bowdenu
 	translate([19-2,36,35]) rotate([-90,30,0]) cylinder(r=1.6,h=50,$fn=6);
@@ -122,11 +105,11 @@ translate([0,45,0]) difference() {
 
 
 
+translate([30,0,0])
 // IDLER
-translate([50,0,0])
 difference() {
 	union() {
-		translate([4.5,2,36.5]) cube([14,40,5]);
+		translate([4.5,1,36.5]) cube([14,41,5]);
 		translate([4.5,24,37]) rotate([-180,0]) cube([14,6,3]);
 	}
 	translate([4,36,36]) cube([15.5,47,2.5]);
