@@ -57,11 +57,11 @@ translate([19+20,21,26.5]) { // uložení ložiska hřídele
 	difference() {
 		union() {
 			translate([0,-21,-26.5]) cube([5,42,39]);
-			rotate([0,90,0]) cylinder(r=10,h=6);
+//			rotate([0,90,0]) cylinder(r=10,h=6);
 			translate([0,-21,12.5]) cube([5,15,8]);
 		}
-		translate([1,0]) rotate([0,90,0]) cylinder(r=8,h=10);
-		translate([-1,0]) rotate([0,90,0]) cylinder(r=6,h=11);
+		translate([-1,0]) rotate([0,90,0]) cylinder(r=8,h=10);
+//		translate([-1,0]) rotate([0,90,0]) cylinder(r=6,h=11);
 		//translate([-1,4.4-21,9.4-26.5]) cube([7,5,5]);
 		//translate([-1,42-7.6-21,9.4-26.5]) cube([7,5,5]);
 
@@ -130,7 +130,7 @@ difference() {
 		translate([4.5,24,37]) rotate([-180,0]) cube([14,6,3]);
 	}
 	translate([4,36,36]) cube([15.5,47,2.5]);
-	translate([4,0,36]) cube([3.5,9,7]);
+	//translate([4,0,36]) cube([3.5,9,7]);
 	translate([4,46-13,36]) cube([3.5,13,7]);
 //	translate([11.5,21,37]) rotate([0,90]) cylinder(r=6.5, h=6, center=true); // test lozisko
 	translate([11.5-3,21-7.5,33]) cube([6,15,20]); 
