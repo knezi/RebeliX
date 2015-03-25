@@ -18,7 +18,7 @@ translate(v=[-15,-9,height/2]) cube(size = [17,39,height], center = true);
  // Cube
  translate(v=[-2-2,-17,4]) cube(size = [8,16,8], center = true);
  // Hexagon
- translate(v=[0,-17,0]) rotate([0,0,30]) cylinder(h = 8, r=8, $fn = 6);
+ translate(v=[0,-17,0]) rotate([0,0,30]) cylinder(h = 16, r=8, $fn = 6);
 }
 
 module x_end_holes(){
@@ -42,7 +42,7 @@ translate(v=[-15,-41.5,6]) rotate(a=[-90,0,0]) pushfit_rod(8.1,50);
 translate(v=[-15,-41.5,rod_distance+6]) rotate(a=[-90,0,0]) pushfit_rod(8.1,50);
 // Nut trap
  translate(v=[0,-17,-0.5]) cylinder(h = 4, r1=3.3, r2=2.8, $fn=25);
- translate(v=[0,-17,3]) rotate([0,0,30]) cylinder(h = 10, r=4.5, $fn = 6);
+ translate(v=[0,-17,3]) rotate([0,0,30]) cylinder(h = 16, r=4.5, $fn = 6);
 }
 
 
