@@ -9,7 +9,7 @@
 // Postacuji i 4 mm
 base_thickness = 5;
 
-difference(){
+module c() {difference(){
 	union(){
 		cube([60,30,base_thickness], center = false);
 		translate([11,0,0])cube([8,30,base_thickness+1.5]);
@@ -19,3 +19,15 @@ difference(){
 		translate([11+4,30/2,-0.1])cylinder(h=10,r=3.1,$fn=32);
 		translate([60-30/2,30/2,-0.1])cylinder(h=10,r=3.1,$fn=32);
 }
+}
+
+c();
+translate([70,0]) c();
+translate([0,40]) c();
+translate([70,40]) c();
+translate([0,80]) c();
+translate([70,80]) c();
+translate([0,120]) c();
+translate([70,120]) c();
+translate([0,160]) c();
+translate([70,160]) c();

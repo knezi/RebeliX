@@ -41,3 +41,18 @@ difference(){
 	y_rod_holder_base();
 	y_cuts();
 }	
+
+translate([50, 0]) difference(){
+	y_rod_holder_base();
+	y_cuts();
+}	
+
+translate([0, 30]) difference(){
+	y_rod_holder_base();
+	y_cuts();
+}	
+
+translate([50, 30]) difference(){
+	y_rod_holder_base();
+	y_cuts();
+}	

@@ -30,3 +30,6 @@ module belt_guide(){
 }
 
 belt_guide();
+translate([30,0]) belt_guide();
+translate([30,30]) belt_guide();
+translate([0,30]) belt_guide();

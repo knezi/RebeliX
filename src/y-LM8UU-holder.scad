@@ -16,6 +16,7 @@ include <../configuration.scad>
  * @id bushing
  */ 
  
+module ml() {
 y_linear_bearings();
 
 // Linear bushing options
@@ -114,6 +115,11 @@ translate(v=[0,0,0]) cylinder(h = 5, r=lm8uu_diameter-3, $fn=50);
 translate(v=[0,0,3]) cylinder(h = 1, r1=lm8uu_diameter-3, r2=lm8uu_diameter, $fn=50);
 }}
 
+}
 
 
+ml();
+translate([40,0]) ml();
+translate([40,40]) ml();
+translate([0,40]) ml();
 
