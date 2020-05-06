@@ -51,3 +51,21 @@ difference(){
 	translate([30+24,10,-0.1]) cylinder(r=2.5,h=10,$fn=30);
 	
 }	
+
+
+translate([0,80,0])
+difference(){
+	union(){
+	  cube([60,20,3]);
+        translate([30,10,0]) cylinder(20,7,7);
+	}	
+	
+	//translate([30,10,4]) cylinder(r=8.5,h=6,$fn=30);
+	//translate([30,10,-2]) cylinder(r=filament_feed_hole_d/2,h=20,$fn=30);
+translate([30,10,0]) cylinder(50,4.1,4.1);
+
+	// Otvory pro prisroubovani
+	translate([30-24,10,-0.1]) cylinder(r=2.5,h=10,$fn=30);
+	translate([30+24,10,-0.1]) cylinder(r=2.5,h=10,$fn=30);
+	
+}	

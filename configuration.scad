@@ -4,7 +4,7 @@ layer_height = 0.3; //Slic3r->Print Settings->Layers and perimeters->Layer heigh
 // Rezerva prumeru hlavy sroubu [mm]
 spare = 1;
 // Prumer hlavy M6 sroubu (pricte se rezerva) [mm]
-M6_head_diameter = 10.6+spare;
+M6_head_diameter = 12.6+spare;
 //M6_head_diameter = 12+spare;
 
 // Vyska hlavy M6 sroubu (dulezite pro zapusteni hlavy sroubu do plastu) [mm]
